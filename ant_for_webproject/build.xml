@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ant" basedir="." default="warFile">
+<project name="ant_for_webproject" basedir="." default="warFile">
 	<tstamp>
 		<format property="NOW" pattern="yyyy-MM-dd HH-mm-ss" locale="cn" />
 	</tstamp>
@@ -16,6 +16,7 @@
 	<!-- 定义任务，清空任务：清空原有的class文件，创建新的build路径。 -->
 	<target name="clean">
 		<delete dir="${basedir}/build" />
+		<delete dir="${basedir}/${warFileName}" />
 		<mkdir dir="${basedir}/build" />
 	</target>
 
